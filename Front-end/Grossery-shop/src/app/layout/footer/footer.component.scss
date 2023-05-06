@@ -1,0 +1,42 @@
+.footer{
+    position: absolute;
+    background-color:rgb(214, 213, 214);
+    width:100%;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content: space-between;
+}
+
+img{
+    width: 50px;
+}
+h1{
+    size: 50px;
+}
+
+.footer-up{
+    display: flex;
+    
+}
+.container{
+    display: flex;
+}
+
+
+p{
+    margin: 1px;
+}
+
+.p1{
+    font-size: 30px;
+    color: rgb(21, 154, 92);
+    text-align: center;
+
+}
+.p2{
+    color: rgb(143, 135, 135);
+    text-align: center;
+
+}

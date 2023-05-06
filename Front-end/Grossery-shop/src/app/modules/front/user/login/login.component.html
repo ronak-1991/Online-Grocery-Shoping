@@ -1,0 +1,29 @@
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">Login</div>
+    </div><br>
+
+<div class="container">
+    <div class="formWraper">
+        <div class="formDiv">
+            
+            <form [formGroup]='loginData'>
+           
+            <div class="formGroup">
+                <i class="far fa-envelope"></i>
+                <input type="text"  placeholder="username" formControlName="username">
+               <span *ngIf="username && username.touched && username.invalid">*Please Input Username</span>
+
+            </div>
+            <div class="formGroup">
+                <i class="fas fa-lock"></i>
+                <input type="password"  placeholder="Password" formControlName="password">
+               <span *ngIf="password && password.touched && password.invalid">*Please Input Your Password</span>
+
+            </div>
+           
+            <button type="submit" class="btn" (click)="onSubmit()" [disabled]="loginData.invalid">SIGN IN</button>
+        </form>
+        </div>
+    </div>
+</div>

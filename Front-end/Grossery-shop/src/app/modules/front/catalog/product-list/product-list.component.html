@@ -1,0 +1,29 @@
+
+<!-- <app-loading *ngIf="spinner; else home "> </app-loading>
+
+
+<ng-template #home> -->
+<!-- </ng-template> -->
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    </div>
+
+<div Class="container" >
+    <div class="card" style="width: 18rem" *ngFor="let data of products">
+        <a routerLink="/catalog/product-details/{{data.product.id}}">
+            <img src="/assets/images/{{data.product.avatar_image}}" class="card-img-top" alt="Image Not found" /></a>
+      <div class="card-body">
+        <h5 class="card-title">{{data.product.title || " "}}</h5>
+        <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-fill"></i>
+    <i class="bi bi-star-half"></i>
+        <div class="d-flex justify-content-between">
+          <h5>${{data.product.amount || " "}}</h5>
+          <!-- <span class="text-decoration-line-through">$5</span> -->
+          <a (click)="addToCart(data.product)" class="btn btn-primary">Add</a>
+        </div>
+      </div>
+    </div>
+    </div> 

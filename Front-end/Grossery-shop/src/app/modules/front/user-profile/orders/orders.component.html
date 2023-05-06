@@ -1,0 +1,58 @@
+
+
+  <div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">Orders</div>
+    </div><br>
+
+    <div class="main d-flex">
+      <app-sidebar></app-sidebar>
+
+  <div class="mx-5 d-flex justify-content-center">
+    <div class="row g-1 m-lg-5 d-flex justify-content-center" >
+  <mat-accordion class="row  d-flex justify-content-center" *ngFor="let order of orders">
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <i class="bi bi-truck"></i>
+          <small class="m-2 text-muted">Complete</small>
+          <small class="m-2 text-muted">Order Date: {{order.order_date}}</small>
+          <small class="m-2 text-muted">estimate Delivered Date:{{order.estimate_delivery_date}}</small>
+          <small class="m-2 text-muted">order Amount: {{order.total_amount}} </small>
+          <span class="m-2 text-muted"> Item: {{order.order_items.length}}</span>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+         
+          
+          
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <table class="table">
+        <thead>
+          <tr >
+            <th scope="col">product name</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Discount Amount</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr *ngFor="let p_details of order.order_items">
+            <td>  {{p_details.product_name}}</td>
+            <td>{{p_details.product_amount}}</td>
+            <td>{{p_details.qty}}</td>
+            <td>{{p_details.discount_amount}}</td>
+          </tr>
+        </tbody> 
+      </table>
+      <div>
+      </div>
+
+    </mat-expansion-panel>
+          </mat-accordion>
+
+</div>
+</div>
+</div>

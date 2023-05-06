@@ -1,0 +1,48 @@
+
+<table class="table">
+    <thead>
+      <tr >
+        <th scope="col">Title</th>
+        <th scope="col">Parent Id</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let data of category">
+        <td>  {{data.title}}</td>
+        <td>{{data.parent_id}}</td>
+      </tr>
+    </tbody>
+  </table>
+<br>
+
+
+
+  <table class="table">
+    <thead>
+      <tr >
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Discount Type</th>
+        <th scope="col">Discount Amount</th>
+        <th scope="col">Description</th>
+        <th scope="col">Sort Description</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr *ngFor="let data of products">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.amount}}</td>
+        <td>{{data.discount_type}}</td>
+        <td>{{data.discount_amount}}</td>
+        <td>{{data.description}}</td>
+        <td>{{data.short_description}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

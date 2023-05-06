@@ -1,0 +1,21 @@
+// 
+
+    .fea-product{
+        display: flex;
+        justify-content: space-between; 
+        .feature{
+        display: flex;
+        float: left;
+        column-gap: 20px;
+          
+        }
+        }
+carousel { 
+            z-index: 50; 
+           
+          }
+
+          .card{
+            margin-left: 20px;
+            margin-right: 20px;
+          }

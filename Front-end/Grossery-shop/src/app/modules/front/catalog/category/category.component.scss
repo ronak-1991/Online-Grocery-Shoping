@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    .card{
+        margin: 10px;
+       width: 180px !important;
+    }
+    img{
+        height: 150px;
+        width: 135px;
+        margin-left:5px;
+    
+    }
+    }
+
+    
+
+    .bi-star-fill{
+        color:rgb(241, 241, 0);
+    }
+    .bi-star-half{
+        color:rgb(241, 241, 0);
+    }
+
+    .img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }

@@ -1,0 +1,45 @@
+<!-- <app-loading *ngIf="spinner; else home "> </app-loading>
+
+
+<ng-template #home> -->
+<!-- </ng-template> -->
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    </div>
+
+
+    <div class="card row justify-content-center mx-auto " style="width: 18rem;" *ngIf="product_data">
+    
+        <img src="/assets/images/{{product_data.avatar_image}}" class="card-img-top" alt="...">
+      
+       
+        <h3 class="text-center">{{product_data.title || " "}}</h3>
+        <p>Price: ₹ {{product_data.amount || " "}}</p>
+       
+        <div class="justify-content-between">Review 
+    
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half input-group-prepend "></i>
+        </div>
+        <div>
+          <button class="btn" (click)="quantity('min')">-</button>
+          <span>{{productQuantity || " "}}</span>
+          <button class="btn" (click)="quantity('pluse')">+</button>
+  </div>
+        <hr>
+        <button class="btn btn-primary" (click)="addToCart(product_data)" *ngIf="!isAddToCart">Add To Cart</button>
+        <button class="btn btn-secondary"  routerLink="/cart/mycart" *ngIf="isAddToCart">Go To Cart</button>
+        
+        <div class="card-body">
+          <p class="card-text">{{product_data.short_description || " "}}</p>
+          <p class="card-text">{{product_data.description || " "}}</p>
+        </div>
+      </div>
+      
+    
+    
+    
+    

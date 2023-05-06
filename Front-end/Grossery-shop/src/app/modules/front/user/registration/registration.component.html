@@ -1,0 +1,58 @@
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">Registration</div>
+    </div><br>
+
+<div class="container">
+    <div class="formWraper">
+        <div class="formDiv">
+            <h2>Create Account</h2>     
+
+            <h5 class="text">Sign Up with Email Address</h5>
+            <form [formGroup]='registrationForm' (ngsubmit)="onSubmit()">
+            <div class="formGroup">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="Username" formControlName="username">
+               <span *ngIf="username && username.touched && username.invalid">*Please Input Username</span>
+            </div>
+
+            <div class="formGroup">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="FirstName" formControlName="first_name">
+               <span *ngIf="first_name && first_name.touched && first_name.invalid">*Please Input Firstname</span>
+            </div>
+
+            <div class="formGroup">
+                <i class="far fa-user"></i>
+                <input type="text" placeholder="LastName" formControlName="last_name">
+               <span *ngIf="last_name && last_name.touched && last_name.invalid">*Please Input lastame</span>
+            </div>
+
+            <div class="formGroup">
+                <i class="far fa-envelope"></i>
+                <input type="email"  placeholder="Email" formControlName="primary_email"><br>
+               <span *ngIf="primary_email && primary_email.touched && primary_email.invalid">*Input valid Email</span>
+
+            </div>
+            <div class="formGroup">
+                <i class="fa fa-phone"></i>
+                <input type="text"  placeholder="Mobile no." formControlName="primary_mobile_number"><br>
+               <span *ngIf="primary_mobile_number && primary_mobile_number?.touched && primary_mobile_number.invalid">*Input Mobile number</span>
+
+            </div>
+            <div class="formGroup">
+                <i class="fas fa-lock"></i>
+                <input type="password"  placeholder="Password" formControlName="password">
+               <span *ngIf="password && password.touched &&  password.invalid">*Please Input password</span>
+
+            </div>
+            <div class="checkBox">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <span class="text">I Agree with Term & Conditions.</span>
+            </div>
+            <button type="submit" class="btn" (click)="onSubmit()" [disabled]="registrationForm.invalid">SIGN UP</button><br>
+        </form>
+        </div>
+    </div>
+</div>
+

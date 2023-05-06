@@ -1,0 +1,174 @@
+<div class="call">
+  <a routerLink="/catalog/category"> <button type="button" class="btn btn-primary btn-lg">
+    <i class="bi bi-grid"></i>Brows All Categories
+  </button></a>
+  <div class="call1">
+    <h3><i class="bi bi-telephone"></i>1233-7777</h3>
+    24/7 support center
+  </div>
+</div>
+<br>
+
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/slide3.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/slide2.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/slide1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <br />
+  <app-explore-category></app-explore-category>
+  <app-feature-products></app-feature-products>
+  
+  <div class="container">
+    <div class="main">
+      <h2>Top Sell</h2>
+      <div class="card" *ngFor="let data of top_rated">
+        <div class="img">
+          <img
+            src="/assets/images/grossery.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ data.fruits }}</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+          <p>$2</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main">
+      <h2>Top Sell</h2>
+      <div class="card" *ngFor="let data of top_rated">
+        <div class="img">
+          <img
+            src="/assets/images/grossery.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ data.fruits }}</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+          <p>$2</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main">
+      <h2>Top Sell</h2>
+      <div class="card" *ngFor="let data of top_rated">
+        <div class="img">
+          <img
+            src="/assets/images/grossery.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ data.fruits }}</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+          <p>$2</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main">
+      <h2>Top Sell</h2>
+      <div class="card" *ngFor="let data of top_rated">
+        <div class="img">
+          <img
+            src="/assets/images/grossery.jpeg"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ data.fruits }}</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+          <p>$2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br /><br />
+  
+  <div class="container">
+    <div class="card" style="width: 18rem">
+      <img src="/assets/images/price-img.png" class="card-img-top img1" alt="..." />
+      <div class="card-body">
+        <h4>Best Price & Deals</h4>
+        <p class="card-text">
+          Dont miss our Daily amazing <br />
+          deals and price
+        </p>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem">
+      <img src="/assets/images/refund.png" class="card-img-top img1" alt="..." />
+      <div class="card-body">
+        <h4>Refundable</h4>
+        <p class="card-text">
+          if your items have damage <br />we agree to refund it
+        </p>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem">
+      <img
+        src="/assets/images/free-delivary.png"
+        class="card-img-top img1"
+        alt="..."
+      />
+      <div class="card-body">
+        <h4>Free delivery</h4>
+        <p class="card-text">
+          do purchasd over $50 and <br />get free delivery anywhere
+        </p>
+      </div>
+    </div>
+  </div>
+  <br />
+  
+  

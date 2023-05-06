@@ -1,0 +1,113 @@
+<div>
+  <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+  <div class="text-overlay">Address</div>
+  </div><br>
+
+  <div class="main">
+
+
+<app-sidebar></app-sidebar>
+
+
+  <div class=" d-flex justify-content-center">
+      <form [formGroup]='user_address'>
+      <button type="submit" class="btn btn1 btn-primary" (click)="onSave(user_address.value)" *ngIf="!showUpdatebtn">Save</button>
+
+      <button type="submit" class="btn btn1 btn-primary" (click)="onUpdate(user_address.value)" *ngIf="showUpdatebtn">Update</button>
+
+      <span>{{errorMessage}}</span>
+  <div class="container">
+  <div class="mb-3">
+    <label  class="form-label">address_line_1 :-</label>
+    <input type="text" class="form-control" formControlName="address_line_1">
+    <span *ngIf="address_line_1 && address_line_1.touched && address_line_1.invalid">*Please enter your address</span>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">address_line_2 :-</label>
+    <input type="text" class="form-control" formControlName="address_line_2">
+    <span *ngIf="address_line_2 && address_line_2.touched && address_line_2.invalid">*Please enter your address</span>
+  </div>
+  </div>
+  
+  <div class="container">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">area :-</label>
+        <input type="text" class="form-control" formControlName="area">
+    <span *ngIf="area && area.touched && area.invalid">*Please enter your area</span>
+
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">City :-</label>
+        <input type="text" class="form-control" formControlName="city">
+        <span *ngIf="city && city.touched && city.invalid">*Please enter your city</span>
+
+      </div>
+      </div>
+      <div class="container" >
+          <div class="mb-3">
+            <label  class="form-label">state :-</label>
+            <input type="text" class="form-control" formControlName="state">
+            <span *ngIf="state&& state.touched && state.invalid">*Please Input state</span>
+
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">country :-</label>
+            <input type="text" class="form-control" formControlName="country">
+            <span *ngIf="country && country.touched && country.invalid">*Please Input country name</span>
+
+          </div>
+          </div>
+
+          <div class="container">
+              <div class="mb-3">
+                <label  class="form-label">postal_code :-</label>
+                <input type="text" class="form-control" formControlName="postal_code">
+                <span *ngIf="postal_code && postal_code.touched && postal_code.invalid">*Please Input postal code</span>
+
+              </div>
+              <div class="mb-3">
+                <label  class="form-label">landmark :-</label>
+                <input type="text" class="form-control" formControlName="landmark">
+                <span *ngIf="landmark && landmark.touched && landmark.invalid">*Please Input valid landmark</span>
+
+              </div>
+              </div>
+              <div class="container">
+                <div class="mb-3">
+                  <label  class="form-label">tag :-</label>
+                  <input type="text" class="form-control" formControlName="tag">
+                  <span *ngIf="tag && tag.touched && tag.invalid">*Please Input tag</span>
+                </div>
+                </div>
+
+          </form>
+ 
+</div></div>
+
+
+<div class="conatiner me-5 my-5 ">
+  <h2 class="text-capitalize">manage-address</h2>
+
+  <div class="d-flex">
+    <div class="card mx-3 my-3" *ngFor="let address of address">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        
+        {{ address.tag }} 
+        <div>        
+        <button class="btn" (click)="onEdit(address)"><i class="bi bi-pencil-square"></i></button>
+        <button class="btn" (click)="onDelete(address.id)"> <i class="fa-sharp fa-solid fa-trash"></i></button>
+      </div>
+    </div>
+
+      <div class="card-body">
+        <p class="card-text">{{ address.address_line_1 }}</p>
+        <p class="card-text">{{ address.address_line_2 }}</p>
+        <p class="card-text">{{ address.landmark }}</p>
+        <p class="card-text">{{ address.area }}</p>
+        <p class="card-text">{{ address.city }}, {{ address.state }} {{ address.postal_code }}</p>
+        <p class="card-text">{{ address.country }}</p>
+      </div>
+
+  </div>
+  </div>
+</div>

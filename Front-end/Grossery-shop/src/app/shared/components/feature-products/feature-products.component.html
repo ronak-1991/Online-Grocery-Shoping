@@ -1,0 +1,41 @@
+<div class="fea-product">
+    <div>
+      <h3>Featured product</h3>
+    </div>
+    <!-- <div class="feature">
+      <a href="">All</a>
+      <a href="">vegetables</a>
+      <a href="">Fruits</a>
+      <a href="">Coffe & teas</a>
+      <a href="">Meat</a>
+    </div> -->
+  </div>
+  
+<carousel [margin]="10" [cellWidth]="200" [cellsToScroll]="1" [height]="360" class="container3">
+    
+      <div class="card carousel-cell d-flex" style="width: 10rem" *ngFor="let product of products">
+        
+        <a routerLink="/catalog/product-details/{{product.id}}">
+          <img src="/assets/images/{{product.avatar_image}}" class="card-img-top" alt="..." /> 
+        </a> 
+        <div class="card-body">
+          <h5 class="card-title">{{product.title }}</h5>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+          <div class="d-flex justify-content-between">
+            <h5>${{product.amount}}</h5>
+            <span class="text-decoration-line-through">$5</span>
+            <a class="btn btn-primary" (click)="addToCart(product)">Add</a>
+          </div>
+        </div>
+      </div>
+      
+  </carousel>
+  
+  <br />
+ 
+
+

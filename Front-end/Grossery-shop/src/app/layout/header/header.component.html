@@ -1,0 +1,51 @@
+<div class="sticky-header">
+<nav class="navbar">
+    <div class="container-fluid">
+      <div class="d-flex">
+        <a routerLink=""><img src="/assets/images/logo.png" alt="**" /></a>
+        <!-- <div class=""> -->
+          <!-- <p class="p1">Cybercom Creation</p> -->
+          <p class="p2">GROCERY SHOPPING APP</p>
+          <!-- </div> -->
+        </div>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+        <div class="any d-flex">
+        <div class="cart">
+        <a routerLink="/cart/mycart"><button class="btn btn-outline-success"> <i class="bi bi-cart4">_Cart &nbsp;<sup><b>{{totalPriceOfCart}}</b></sup></i></button></a>
+        
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-outline-success dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+        <i class="bi bi-person-circle"></i> {{userName || ""}} 
+        </button>
+        <ul class="dropdown-menu left" aria-labelledby="dropdownMenuButton" #ul>
+          <li routerLink="/admin/register" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Register</a></li>
+          <li routerLink="/admin/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Login</a></li>
+          <li routerLink="/user/registration" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Customer Register</a></li>
+          <li routerLink="/user/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Customer Login</a></li>
+          <li routerLink="" *ngIf="ifToken" type="submit" (click)="logout()"><a class="dropdown-item">Log Out</a></li>
+          <li routerLink="/user-profile/profile" *ngIf="ifToken"><a class="dropdown-item">Profile</a></li>
+          
+        </ul>
+      </div>
+    </div>
+       <!-- <div class="button">
+          <a routerLink="/user/registration"><button class="btn btn-outline-success " *ngIf="!ifToken" type="submit">Register</button></a>
+          <a routerLink="/user/login"><button class="btn btn-outline-success" *ngIf="!ifToken" type="submit">Log in</button></a>
+          <a routerLink=""><button class="btn btn-outline-success" *ngIf="ifToken" type="submit" (click)="logout()">Log out</button></a>
+          <a routerLink="/user-profile/profile"><button class="btn btn-outline-success" *ngIf="ifToken"  type="submit" >{{userName}}</button></a>
+      </div> -->
+    </div>
+  </nav>
+
+ 

@@ -1,0 +1,31 @@
+
+<div class="fea-product">
+    <div>
+      <h3>Explore categories</h3>
+    </div>
+    <!-- <div class="feature">
+      <a routerLink="/catlog/category">All</a>
+      <a href="">vegetables</a>
+      <a href="">Fruits</a>
+      <a href="">Coffe & teas</a>
+      <a href="">Meat</a>
+    </div> -->
+  </div>
+  
+
+
+<carousel [margin]="10" [cellWidth]="200" [cellsToScroll]="1" [height]="200" class="container3">
+    
+  <div class="card carousel-cell d-flex" style="width: 10rem" *ngFor="let data of category">
+    
+    <a routerLink="/catalog/product-list/{{data.id}}"> 
+      <img src="/assets/images/grossery.jpeg" class="card-img-top" alt="..." />
+    </a>
+
+    <div class="card-body">
+      <h5 class="card-title">{{data.title}}</h5>
+    </div>
+  </div>
+  
+</carousel>
+<br>

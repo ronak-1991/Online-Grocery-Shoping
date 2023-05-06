@@ -1,0 +1,50 @@
+<!-- <app-loading *ngIf="spinner; else home "> </app-loading>
+
+
+<ng-template #home> -->
+
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    </div>
+
+<div class="dropdown" style="margin-left: 90%;">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-filter"></i>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" #ul>
+      <li (click)="filtercatagorybyitem('All')" value="All"> <a class="dropdown-item">All</a></li>
+      <li (click)="filtercatagorybyitem(data.id)" *ngFor="let data of category"><a class="dropdown-item" >{{data.title || " "}}</a></li>
+    </ul>
+  </div>
+
+  
+        <div Class="container" >
+        <div class="card " style="width: 10rem" *ngFor="let product of filteredcatagory">
+        
+          <a routerLink="/catalog/product-details/{{product.id}}">
+            <img src="/assets/images/{{product.avatar_image}}" class="card-img-top" alt="..." />
+          </a> 
+          <div class="card-body">
+            <h5 class="card-title">{{product.title || " " }}</h5>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star unchecked"></span>
+            <div class="d-flex justify-content-between">
+              <h5>${{product.amount || " "}}</h5>
+              <span class="text-decoration-line-through">$5</span>
+              <a class="btn btn-primary" (click)="addToCart(product)">Add</a>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+    <!-- </ng-template> -->

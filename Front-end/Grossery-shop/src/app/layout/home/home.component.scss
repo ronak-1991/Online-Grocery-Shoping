@@ -1,0 +1,65 @@
+
+.call{
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 1%;
+    .call1{
+    display: flex;
+    float: left;
+    column-gap: 20px;
+      
+    }
+    }
+
+.container{
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+   
+    .main{
+        h2{
+            width: auto;
+            text-align: center;
+        }
+        //width: 500px;
+           .card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+        
+         }
+        }
+        
+}
+
+
+ .display{
+     margin-left: 15px;
+     margin-right: 15px;
+ }
+
+
+ .fa{
+             color: rgb(230, 230, 6);
+         }
+
+
+.carousel{
+    height: max-content;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    img{
+        height: 400px;
+       
+    }
+}
+
+
+.img1{
+    height: 150px;
+    width: 200px;
+    display: flex;
+    margin-left: 30px
+}

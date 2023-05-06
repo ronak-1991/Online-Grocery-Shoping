@@ -1,0 +1,94 @@
+
+<!-- <app-loading *ngIf="spinner; else home "> </app-loading>
+
+
+<ng-template #home> -->
+
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">CART</div>
+    </div><br>
+    <div *ngIf="cartData.length>0 else empytCart">
+<table class="table">
+    <thead>
+      <tr >
+        <th scope="col">Item Description</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Sub Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <!-- <tbody *ngFor="let group of groupedProducts;let y=index">
+      <tr>{{group.catagory}}  &nbsp;&nbsp;{{group.cart.length}}</tr>
+
+      <tr *ngFor="let p_details of group.cart;let i=index">
+        <td>{{p_details.quantity}}g  {{p_details.cat_name}}</td>
+        <td>{{p_details.price | currency }}</td>
+        <td> <div>
+            <button class="btn" (click)="subQuantity(p_details.id,y,i)">-</button>
+            <span>{{p_details.product_quan}}</span>
+            <button class="btn" (click)="addQuantity(p_details.id,y,i)">+</button>
+    </div></td>
+    <td>{{p_details.product_quan * p_details.price |currency}}</td>
+    <td>
+       <i type="button" class="bi bi-x-lg" (click)="delCartData(p_details.id)"></i>
+    </td>
+      </tr>
+    </tbody> -->
+    <tbody>
+
+      <tr *ngFor="let p_details of cartData">
+        <td>  {{p_details.title}}</td>
+        <td>{{p_details.amount}}</td>
+        <td> <div>
+            <button class="btn" (click)="quantity('min',p_details)">-</button>
+            <span>{{p_details.quantity}}</span>
+            <button class="btn"   (click)="quantity('pluse',p_details)" >+</button>
+    </div></td>
+    <td>{{p_details.quantity * p_details.amount}}</td>
+    <td>
+       <i type="button" class="bi bi-x-lg" (click)="delCartData(p_details)"></i>
+    </td>
+      </tr>
+    </tbody>
+  </table>
+<div class="d-flex justify-content-end">
+<div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Sub-Total :~ {{subtotal}}</li>
+      <li class="list-group-item">Delivery Charges:~ **</li>
+      <li class="list-group-item"></li>
+    </ul>
+    <div class="card-footer">
+        Grand Total :~ {{subtotal}}
+    </div>
+    <a routerLink="/cart/checkout" class="btn btn-primary" >Checkout</a>
+  </div>
+</div>
+</div>
+
+<ng-template #empytCart>
+<div class="container-fluid  mt-100">
+  <div class="row">
+  
+   <div class="col-md-12">
+   
+       <div class="card">
+     <div class="card-body cart">
+         <div class="col-sm-12 empty-cart-cls text-center">
+           <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+           <h3><strong>Your Cart is Empty</strong></h3>
+           <h4>Add something to make me happy :)</h4>
+           <a routerLink="" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+               
+         </div>
+     </div>
+ </div>
+     
+   </div>
+  </div>
+ </div>
+</ng-template>
+
+<!-- </ng-template> -->

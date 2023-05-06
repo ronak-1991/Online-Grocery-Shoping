@@ -1,0 +1,63 @@
+<div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">Profile</div>
+    </div><br>
+
+    <div class="main">
+
+
+<app-sidebar></app-sidebar>
+
+
+    <div class=" d-flex justify-content-center">
+        <form [formGroup]='profileDetails'>
+        <button type="submit" class="btn btn-primary" (click)="onSave(profileDetails.value)">Save</button>
+    <div class="container">
+    <div class="mb-3">
+      <label  class="form-label">First Name :-</label>
+      <input type="text" class="form-control" formControlName="first_name">
+      <span *ngIf="first_name && first_name.touched && first_name.invalid">*Please Input firstname</span>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Last Name :-</label>
+      <input type="text" class="form-control" formControlName="last_name">
+      <span *ngIf="last_name && last_name.touched && last_name.invalid">*Please Input lastname</span>
+    </div>
+    </div>
+    <div class="container">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email :-</label>
+          <input type="email" class="form-control" formControlName="primary_email">
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Contact Number :-</label>
+          <input type="text" class="form-control" formControlName="primary_mobile_number">
+        </div>
+        </div>
+        <div class="container" >
+            <div class="mb-3">
+              <label  class="form-label">Alternate Contact Email :-</label>
+              <input type="email" class="form-control" formControlName="secondary_email">
+            </div>
+            <div class="mb-3">
+              <label  class="form-label">Alternate Contact Number :-</label>
+              <input type="text" class="form-control" formControlName="secondary_mobile_number">
+            </div>
+            </div>
+
+            <div class="container">
+                <div class="mb-3">
+                  <label  class="form-label">Date of Birth :-</label>
+                  <input type="date" class="form-control" formControlName="date_of_birth">
+                </div>
+                <div class="mb-3">
+                  <label  class="form-label">password :-</label>
+                  <input type="text" class="form-control" formControlName="password">
+                  <span *ngIf="password && password.touched && password.invalid">*Please Input valid password</span>
+
+                </div>
+                </div>
+
+            </form>
+   
+</div></div>

@@ -1,0 +1,177 @@
+{
+  "fea_product": [
+    {
+      "id": 1,
+      "catagory": "vagetables",
+      "cat_name": "potato",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "potato.png"
+    },
+    {
+      "id": 2,
+      "catagory": "Fruits",
+      "cat_name": "apple",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "apple.png"
+    },
+    {
+      "id": 3,
+      "catagory": "Fruits",
+      "cat_name": "banana",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "banana.png"
+    },
+    {
+      "id": 4,
+      "catagory": "vagetables",
+      "cat_name": "carrot",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "carrot.png"
+    },
+    {
+      "id": 5,
+      "catagory": "Fruits",
+      "cat_name": "orange",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "orange.png"
+    },
+    {
+      "id": 6,
+      "catagory": "Fruits",
+      "cat_name": "strawberry",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "strawberry.png"
+    },
+    {
+      "id": 7,
+      "catagory": "vagetables",
+      "cat_name": "tomato",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "tomato.png"
+    },
+    {
+      "id": 8,
+      "catagory": "vagetables",
+      "cat_name": "brocoli",
+      "quantity": "500",
+      "price": 2,
+      "product_quan": "1",
+      "img": "brocoli.png"
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "product-1",
+      "amount": 60,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602125915-male.jpg",
+      "images": null,
+      "short_description": "short description 1",
+      "description": "description 1",
+      "slug": "product-1",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T09:55:25.000Z",
+      "updatedAt": "2023-04-04T09:55:25.000Z"
+    },
+    {
+      "id": 2,
+      "title": "product-2",
+      "amount": 100,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602178206-male.jpg",
+      "images": null,
+      "short_description": "short description 2",
+      "description": "description 2",
+      "slug": "product-2",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T09:56:18.000Z",
+      "updatedAt": "2023-04-04T09:56:18.000Z"
+    },
+    {
+      "id": 3,
+      "title": "product-3",
+      "amount": 70,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602234759-male.jpg",
+      "images": null,
+      "short_description": "short description 3",
+      "description": "description 3",
+      "slug": "product-3",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T09:57:14.000Z",
+      "updatedAt": "2023-04-04T09:57:14.000Z"
+    },
+    {
+      "id": 10,
+      "title": "product-10",
+      "amount": 110,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602491447-male.jpg",
+      "images": null,
+      "short_description": "short description 10",
+      "description": "description 10",
+      "slug": "product-10",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T10:01:31.000Z",
+      "updatedAt": "2023-04-04T10:01:31.000Z"
+    },
+    {
+      "id": 9,
+      "title": "product-9",
+      "amount": 260,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602467883-male.jpg",
+      "images": null,
+      "short_description": "short description 9",
+      "description": "description 9",
+      "slug": "product-9",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T10:01:07.000Z",
+      "updatedAt": "2023-04-04T10:01:07.000Z"
+    },
+    {
+      "id": 8,
+      "title": "product-8",
+      "amount": 200,
+      "discount_type": 1,
+      "discount_amount": 0,
+      "avatar_image": "1680602444212-male.jpg",
+      "images": null,
+      "short_description": "short description 8",
+      "description": "description 8",
+      "slug": "product-8",
+      "is_active": true,
+      "deleted_at": null,
+      "createdAt": "2023-04-04T10:00:44.000Z",
+      "updatedAt": "2023-04-04T10:00:44.000Z"
+    },
+    {
+      "id": 11
+    }
+  ]
+}
