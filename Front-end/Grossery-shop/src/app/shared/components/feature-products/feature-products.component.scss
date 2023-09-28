@@ -4,7 +4,7 @@
     .feature{
     display: flex;
     float: left;
-    column-gap: 20px;
+    // column-gap: 20px;
       
     }
     }
@@ -13,6 +13,9 @@
   .card{
     margin-left: 20px;
     margin-right: 20px;
+    img{
+      height: 20px;
+    }
   }
 
  .fa{
@@ -21,4 +24,9 @@
 
 carousel { 
 z-index: 50; /* lower value than the sticky header */
+}
+
+.image{
+  width:200px ;
+  height: 200px;
 }

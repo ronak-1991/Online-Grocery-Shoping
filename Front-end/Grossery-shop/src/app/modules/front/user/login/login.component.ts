@@ -33,6 +33,7 @@ ngOnInit(){
       console.log(res.data)
       if(res){
         this.router.navigate(['']);
+        window.onload
       }
     },
     (error) => {

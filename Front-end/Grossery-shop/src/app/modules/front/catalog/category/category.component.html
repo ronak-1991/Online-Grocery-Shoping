@@ -38,7 +38,7 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star unchecked"></span>
             <div class="d-flex justify-content-between">
-              <h5>${{product.amount || " "}}</h5>
+              <h5>{{product.amount | currency: 'INR' || " "}}</h5>
               <span class="text-decoration-line-through">$5</span>
               <a class="btn btn-primary" (click)="addToCart(product)">Add</a>
             </div>

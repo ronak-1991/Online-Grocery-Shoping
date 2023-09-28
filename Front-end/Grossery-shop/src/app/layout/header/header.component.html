@@ -8,10 +8,10 @@
           <p class="p2">GROCERY SHOPPING APP</p>
           <!-- </div> -->
         </div>
-        <form class="d-flex" role="search">
+        <!-- <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
 
         <div class="any d-flex">
         <div class="cart">
@@ -26,13 +26,14 @@
           data-mdb-toggle="dropdown"
           aria-expanded="false"
         >
-        <i class="bi bi-person-circle"></i> {{userName || ""}} 
+        <i class="bi bi-person-circle"></i> 
+        <!-- {{userName || ""}}  -->
         </button>
         <ul class="dropdown-menu left" aria-labelledby="dropdownMenuButton" #ul>
           <li routerLink="/admin/register" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Register</a></li>
           <li routerLink="/admin/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Login</a></li>
-          <li routerLink="/user/registration" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Customer Register</a></li>
-          <li routerLink="/user/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Customer Login</a></li>
+          <li routerLink="/user/registration" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Register</a></li>
+          <li routerLink="/user/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item"> Login</a></li>
           <li routerLink="" *ngIf="ifToken" type="submit" (click)="logout()"><a class="dropdown-item">Log Out</a></li>
           <li routerLink="/user-profile/profile" *ngIf="ifToken"><a class="dropdown-item">Profile</a></li>
           

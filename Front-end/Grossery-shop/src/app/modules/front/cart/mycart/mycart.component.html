@@ -57,11 +57,12 @@
 <div class="card" style="width: 18rem;">
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Sub-Total :~ {{subtotal}}</li>
+      <li class="list-group-item">GST :~ 18%</li>
       <li class="list-group-item">Delivery Charges:~ **</li>
       <li class="list-group-item"></li>
     </ul>
     <div class="card-footer">
-        Grand Total :~ {{subtotal}}
+        Grand Total :~ {{subtotal  + (subtotal * 0.18)}}
     </div>
     <a routerLink="/cart/checkout" class="btn btn-primary" >Checkout</a>
   </div>

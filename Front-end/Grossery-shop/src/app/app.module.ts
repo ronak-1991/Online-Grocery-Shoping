@@ -44,7 +44,7 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
     CommonModule,
     ToastrModule.forRoot({
       timeOut: 5000,
-      positionClass: 'toast-bottom-center',
+      positionClass: 'toast-top-center',
       preventDuplicates: true,
     })
     

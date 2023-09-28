@@ -88,7 +88,7 @@ placeOrder(){
     "estimate_delivery_date": this.future.toLocaleDateString(),
     "sub_total": this.subtotal,
     "tax_amount": this.subtotal * 0.18,
-    "discount_amount": this.subtotal * 0.05,
+    "discount_amount": 0,
     "total_amount": this.subtotal + (this.subtotal * 0.18),
     "paid_amount": (this.subtotal + (this.subtotal * 0.18)) ,
     "payment_type": 2,

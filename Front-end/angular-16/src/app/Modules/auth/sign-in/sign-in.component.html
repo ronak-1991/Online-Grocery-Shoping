@@ -1,0 +1,62 @@
+<!-- <div>
+    <img src="/assets/images/pro-detail-slide.jpg" class="img" alt="...">
+    <div class="text-overlay">Login</div>
+    </div><br>
+
+<div class="container">
+    <div class="formWraper">
+        <div class="formDiv">
+            
+            <form [formGroup]='loginData'>
+           
+            <div class="formGroup">
+                <i class="far fa-envelope"></i>
+                <input type="text"  placeholder="Email" formControlName="email">
+               <span *ngIf="email && email.touched && email.invalid">*Please Input email</span>
+
+            </div>
+            <div class="formGroup">
+                <i class="fas fa-lock"></i>
+                <input type="password"  placeholder="Password" formControlName="password">
+               <span *ngIf="password && password.touched && password.invalid">*Please Input Your Password</span>
+
+            </div>
+           
+            <button type="submit" class="btn" (click)="onSubmit()" [disabled]="loginData.invalid">SIGN IN</button>
+        </form>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="container">
+    <div class="formWraper"> -->
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+<form [formGroup]="loginData" >
+  <p>
+    <mat-form-field>
+      <input type="text" matInput placeholder="Username" formControlName="email">
+    </mat-form-field>
+    <mat-error *ngIf="email && email.touched && email.invalid">*Please Input email</mat-error>
+
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    <mat-error *ngIf="password && password.touched && password.invalid">*Please Input Your Password</mat-error>
+
+    </mat-form-field>
+  </p>
+
+
+  <div class="p-16">
+    <button mat-flat-button color="accent" (click)="onSubmit()" class="w-100 text-white">LogIn</button>
+  </div>
+</form>
+</mat-card-content>
+</mat-card>
+<!-- </div>
+</div> -->

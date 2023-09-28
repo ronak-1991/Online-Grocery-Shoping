@@ -1,0 +1,60 @@
+<!-- Form Layout -->
+<div class="card">
+    <div class="card-body">
+      <!-- <h4 class="mb-32">Form Layout</h4> -->
+      <form [formGroup]="productForm">
+        <div class="container">
+        <div class="container1">
+        <mat-form-field class=" fs-16" appearance="fill">
+          <mat-label>Product Name</mat-label>
+          <input matInput type="text" formControlName="title" placeholder="Product Name">
+        </mat-form-field>
+  
+        <mat-form-field class=" fs-16" appearance="fill">
+          <mat-label>Amount</mat-label>
+          <input matInput type="number" placeholder="Amount" formControlName="amount">
+        </mat-form-field>
+
+      
+    </div>
+    <div class="img">
+        <input type="file" class="d-none"  (change)="preview(image.files)" #image>
+        <img [src]="imgUrl"  alt="" (click)="image.click()">
+    </div>
+</div>
+      
+<div class="container">
+<div>
+    <mat-form-field class=" fs-16" appearance="fill">
+        <mat-label>Discount Amount</mat-label>
+        <input matInput type="number" placeholder="Discount Amount" formControlName="discount_amount">
+      </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <mat-label>Select Category</mat-label>
+    <mat-select  multiple formControlName="categoryArrayFromBody">
+      <mat-option *ngFor="let item of  AllCategory" [value]="item.id"  >
+        {{ item.title }}  
+      </mat-option>
+    </mat-select>
+  </mat-form-field> 
+</div>
+    </div>
+  <div class="textarea">
+        <mat-form-field  appearance="outline">
+          <mat-label>Short Description</mat-label>
+          <textarea matInput rows="6" placeholder="Write your Description" formControlName="short_description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field  appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput rows="6" placeholder="Write your Description" formControlName="description"></textarea>
+          </mat-form-field>
+        </div>
+
+        <button mat-flate-button color="accent" class="btn btn-info fw-normal"
+        (click)="submitForm()"><mat-icon class="align-middle">add</mat-icon>New Product</button>
+      </form>
+    </div>
+  </div>

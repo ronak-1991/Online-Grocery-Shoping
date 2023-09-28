@@ -14,7 +14,7 @@
       
        
         <h3 class="text-center">{{product_data.title || " "}}</h3>
-        <p>Price: ₹ {{product_data.amount || " "}}</p>
+        <p>Price: {{product_data.amount | currency: 'INR' || " "}}</p>
        
         <div class="justify-content-between">Review 
     

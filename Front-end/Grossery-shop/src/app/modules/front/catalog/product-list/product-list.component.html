@@ -20,7 +20,7 @@
     <i class="bi bi-star-fill"></i>
     <i class="bi bi-star-half"></i>
         <div class="d-flex justify-content-between">
-          <h5>${{data.product.amount || " "}}</h5>
+          <h5>{{data.product.amount | currency: 'INR' || " "}}</h5>
           <!-- <span class="text-decoration-line-through">$5</span> -->
           <a (click)="addToCart(data.product)" class="btn btn-primary">Add</a>
         </div>

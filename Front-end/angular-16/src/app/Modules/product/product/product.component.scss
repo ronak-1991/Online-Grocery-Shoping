@@ -1,0 +1,18 @@
+ img{
+    width: 150px !important;
+    height: 150px !important;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container1{
+    width: min-content;
+}
+
+.textarea{
+    display: flex;
+    gap:110px;
+}

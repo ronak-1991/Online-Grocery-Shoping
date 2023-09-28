@@ -2,16 +2,16 @@
 <table class="table">
     <thead>
       <tr >
+        <th scope="col">Id</th>
         <th scope="col">Title</th>
-        <th scope="col">Parent Id</th>
         <th></th>
       </tr>
     </thead>
 
     <tbody>
       <tr *ngFor="let data of category">
+        <td>{{data.id}}</td>
         <td>  {{data.title}}</td>
-        <td>{{data.parent_id}}</td>
       </tr>
     </tbody>
   </table>
