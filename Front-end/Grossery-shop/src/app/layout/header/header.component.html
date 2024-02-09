@@ -30,8 +30,8 @@
         <!-- {{userName || ""}}  -->
         </button>
         <ul class="dropdown-menu left" aria-labelledby="dropdownMenuButton" #ul>
-          <li routerLink="/admin/register" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Register</a></li>
-          <li routerLink="/admin/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Login</a></li>
+          <!-- <li routerLink="/admin/register" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Register</a></li> -->
+          <!-- <li routerLink="/admin/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Admin Login</a></li> -->
           <li routerLink="/user/registration" *ngIf="!ifToken" type="submit"><a class="dropdown-item">Register</a></li>
           <li routerLink="/user/login" *ngIf="!ifToken" type="submit"><a class="dropdown-item"> Login</a></li>
           <li routerLink="" *ngIf="ifToken" type="submit" (click)="logout()"><a class="dropdown-item">Log Out</a></li>

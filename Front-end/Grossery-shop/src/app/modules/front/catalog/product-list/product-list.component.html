@@ -11,7 +11,7 @@
 <div Class="container" >
     <div class="card" style="width: 18rem" *ngFor="let data of products">
         <a routerLink="/catalog/product-details/{{data.product.id}}">
-            <img src="/assets/images/{{data.product.avatar_image}}" class="card-img-top" alt="Image Not found" /></a>
+            <img src="http://localhost:8080/products/{{data.product.avatar_image}}" class="card-img-top" alt="Image Not found" /></a>
       <div class="card-body">
         <h5 class="card-title">{{data.product.title || " "}}</h5>
         <i class="bi bi-star-fill"></i>

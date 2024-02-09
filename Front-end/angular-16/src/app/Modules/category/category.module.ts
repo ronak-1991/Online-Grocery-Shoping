@@ -8,6 +8,11 @@ import {MatTableModule} from '@angular/material/table';
 import { CategoryRoutingModule } from './category-routing.module';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryComponent } from './category/category.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { DemoFlexyModule } from 'src/app/demo-flexy-module';
 
 
 @NgModule({
@@ -20,7 +25,13 @@ import { CategoryComponent } from './category/category.component';
     CategoryRoutingModule,
     MatCardModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    FormsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    DemoFlexyModule,
+    ReactiveFormsModule
 
   ]
 })

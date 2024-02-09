@@ -12,6 +12,13 @@ export class DataService {
   allCategory=environment.all_category
   allProduct=environment.all_product
   AddProduct = environment.newProduct
+  updateProduct = environment.updateProduct
+  productById=environment.productById
+  encryption=environment.encryption;
+  AddCategoryAPI =environment.AddCategory;
+
+
+
   constructor(private http:HttpClient) { }
 
 getCategory(){
@@ -22,6 +29,15 @@ getCategory(){
   return throwError(() => new Error(error))
  }
 }
+
+AddCategory(body:any){
+  try {
+    return this.http.post(this.baseUrl + this.AddCategoryAPI,body,{headers: new HttpHeaders({'ngrok-skip-browser-warning': 'skip-browser-warning', 'Access-Control-Allow-Origin': '*'})})
+   } catch (error:any) {
+    return throwError(() => new Error(error))
+   }
+}
+
 
 getAllProduct(){
   try {
@@ -39,4 +55,32 @@ NewProduct(body:any){
   }
 
 }
+
+UpdateProduct(body:any){
+  try {
+    return this.http.put(this.baseUrl + this.updateProduct,body,{headers: new HttpHeaders({'ngrok-skip-browser-warning': 'skip-browser-warning', 'Access-Control-Allow-Origin': '*'})})
+  } catch (error:any) {
+    return throwError(() => new Error(error));
+  }
+
+}
+
+
+getProductById(encryption:any){
+  try {
+    return this.http.get(this.baseUrl + this.productById ,{headers: new HttpHeaders({'ngrok-skip-browser-warning': 'skip-browser-warning', 'Access-Control-Allow-Origin': '*','product_id': encryption,})})
+  } catch (error:any) {
+    return throwError(() => new Error(error));
+  }
+}
+
+
+Encryption(id:any){
+  try {
+    return this.http.get<any>(this.baseUrl+this.encryption,{headers: new HttpHeaders({'ngrok-skip-browser-warning': 'skip-browser-warning', 'Access-Control-Allow-Origin': '*','id':id})})
+  } catch (error:any) {
+    return throwError(() => new Error(error))
+  }
+}
+
 }

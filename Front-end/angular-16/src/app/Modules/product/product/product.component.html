@@ -5,6 +5,8 @@
       <form [formGroup]="productForm">
         <div class="container">
         <div class="container1">
+  <!-- <input type="file" (change)="demo($event)" formControlName="title"> -->
+
         <mat-form-field class=" fs-16" appearance="fill">
           <mat-label>Product Name</mat-label>
           <input matInput type="text" formControlName="title" placeholder="Product Name">
@@ -55,6 +57,9 @@
 
         <button mat-flate-button color="accent" class="btn btn-info fw-normal"
         (click)="submitForm()"><mat-icon class="align-middle">add</mat-icon>New Product</button>
+
+        <button mat-flate-button color="accent" class="btn btn-info fw-normal" 
+        routerLink="/product"><mat-icon class="align-middle">arrow_back_ios</mat-icon>Back</button>
       </form>
     </div>
   </div>

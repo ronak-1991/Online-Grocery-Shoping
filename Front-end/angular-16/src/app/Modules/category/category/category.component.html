@@ -1,1 +1,30 @@
-<p>category works!</p>
+<!-- Form Layout -->
+<div class="card">
+    <div class="card-body">
+      <form [formGroup]="categoryForm">
+        <div class="container">
+
+
+        <mat-form-field class=" fs-16" appearance="fill">
+          <mat-label>Category Title</mat-label>
+          <input matInput type="text" placeholder="Category Title" formControlName="title">
+        </mat-form-field>
+  
+</div>
+      
+<div class="container">
+
+<div>
+
+</div>
+    </div>
+
+
+        <button mat-flate-button color="accent" class="btn btn-info fw-normal"
+        (click)="submitForm()"><mat-icon class="align-middle">add</mat-icon>New Category</button>
+
+        <button mat-flate-button color="accent" class="btn btn-info fw-normal" 
+        routerLink="/category"><mat-icon class="align-middle">arrow_back_ios</mat-icon>Back</button>
+      </form>
+    </div>
+  </div>

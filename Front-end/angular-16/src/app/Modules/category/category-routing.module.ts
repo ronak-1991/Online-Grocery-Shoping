@@ -5,7 +5,13 @@ import { CategoryComponent } from './category/category.component';
 
 const routes: Routes = [
   {path:"",component:CategoryListComponent},
-  {path:"new",component:CategoryComponent}
+  {path:"new",component:CategoryComponent,
+  data: { mode: "add"}},
+  {
+    path: "view/:id",
+    component: CategoryComponent,
+    data: { mode: "view"}
+  },
 ];
 
 @NgModule({

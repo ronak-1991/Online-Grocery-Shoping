@@ -8,5 +8,9 @@ export const environment = {
       adminLogin:"/admin/login",
       all_category:"/category/get-all-categories",
       all_product:"/product/get-all-products",
-      newProduct:"/product/add-product"
+      newProduct:"/product/add-product",
+      productById:"/product/get-product-by-id",
+      encryption:"/encryption",
+      updateProduct:"/product/update-product",
+      AddCategory:"/category/add-category"
 };
